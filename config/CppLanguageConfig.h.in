@@ -1,0 +1,26 @@
+/*SHEILa========================================================================
+ * Name        : CppLanguageConfig.h
+ * Author      : @CppLanguage_AUTHOR_NAME@<@CppLanguage_AUTHOR_MAIL@>
+ * Version     : @CppLanguage_VERSION@
+ * Copyright   : @CppLanguage_COPYRIGHT@
+ * Description : @CppLanguage_DESCRIPTION@
+ * Module      : @PROJECT_NAME@/@CppLanguage_NAME@
+ * Created     : @CppLanguage_DATE_CREATED@
+ * Modified    : @CppLanguage_DATE_MODIFIED@
+ *==============================================================================
+ */
+#cmakedefine CMAKE_VERSION @CMAKE_VERSION@
+
+#cmakedefine MODULE_VERSION @MODULE_VERSION@
+
+#cmakedefine MODULE_NAME "@MODULE_NAME@"
+
+#cmakedefine PROJECT_VERSION @PROJECT_VERSION@
+
+#cmakedefine PROJECT_NAME "@PROJECT_NAME@"
+
+#cmakedefine PROJECT_CXX_STANDARD @PROJECT_CXX_STANDARD@
+
+#cmakedefine REQUIRES_NOARG_CONSTRUCTOR @REQUIRES_NOARG_CONSTRUCTOR@
+
+#define __cplusplus CXX_@PROJECT_CXX_STANDARD@

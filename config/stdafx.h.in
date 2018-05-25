@@ -1,0 +1,27 @@
+/*SHEILa========================================================================
+ * Name        : stdafx.h
+ * Author      : @CppLanguage_AUTHOR_NAME@<@CppLanguage_AUTHOR_MAIL@>
+ * Version     : @CppLanguage_VERSION@
+ * Copyright   : @CppLanguage_COPYRIGHT@
+ * Description : @CppLanguage_DESCRIPTION@
+ * Module      : @PROJECT_NAME@/@CppLanguage_NAME@
+ * Created     : @CppLanguage_DATE_CREATED@
+ * Modified    : @CppLanguage_DATE_MODIFIED@
+ *==============================================================================
+ */
+#ifndef @PROJECT_NAME@_@MODULE_NAME@_INCLUDE_STDAFX_H_
+#define @PROJECT_NAME@_@MODULE_NAME@_INCLUDE_STDAFX_H_
+
+
+#ifdef _WIN32 || _WIN64
+	#pragma once
+
+	#include "targetver.h"
+
+	#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+	// Windows Header Files:
+	#include <windows.h>
+#endif
+
+
+#endif /* @PROJECT_NAME@_@MODULE_NAME@_INCLUDE_STDAFX_H_ */

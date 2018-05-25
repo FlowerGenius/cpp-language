@@ -1,0 +1,78 @@
+/*SHEILa========================================================================
+ * Name        : targetver.h
+ * Author      : @CppLanguage_AUTHOR_NAME@<@CppLanguage_AUTHOR_MAIL@>
+ * Version     : @CppLanguage_VERSION@
+ * Copyright   : @CppLanguage_COPYRIGHT@
+ * Description : @CppLanguage_DESCRIPTION@
+ * Module      : @PROJECT_NAME@/@CppLanguage_NAME@
+ * Created     : @CppLanguage_DATE_CREATED@
+ * Modified    : @CppLanguage_DATE_MODIFIED@
+ *==============================================================================
+ */
+#ifndef @PROJECT_NAME@_@MODULE_NAME@_INCLUDE_TARGETVER_H_
+#define @PROJECT_NAME@_@MODULE_NAME@_INCLUDE_TARGETVER_H_
+
+#ifdef _WIN32 || _WIN64
+	#pragma once
+
+	#define _WIN32_WINNT_WINLATEST 0x0000
+	#define NTDDI_WINLATEST    0x00000000
+
+	// Including SDKDDKVer.h defines the highest available Windows platform.
+
+	// If you wish to build your application for a previous Windows platform, 
+	// include WinSDKVer.h and set the _WIN32_WINNT macro to the platform you 
+	// wish to support before including SDKDDKVer.h.
+
+	#ifndef _WIN32_WINNT_@WINDOWS_WINNT_TARGET_VER@ 
+		
+		#undef _WIN32_WINNT_WINLATEST
+	
+		#include <WinSDKVer.h>
+	
+		#ifdef _WIN32_WINNT
+			#if _WIN32_WINNT < _WIN32_WINNT_@WINDOWS_WINNT_TARGET_VER@
+				#define _WIN32_WINNT  _WIN32_WINNT_@WINDOWS_WINNT_TARGET_VER@
+			#endif
+		#else
+			#define _WIN32_WINNT  _WIN32_WINNT_@WINDOWS_WINNT_TARGET_VER@
+		#endif
+
+		#ifdef WINVER
+			#if WINVER < _WIN32_WINNT_@WINDOWS_WINNT_TARGET_VER@
+				#define WINVER  _WIN32_WINNT_@WINDOWS_WINNT_TARGET_VER@
+			#endif
+		#else
+			#define WINVER  _WIN32_WINNT_@WINDOWS_WINNT_TARGET_VER@
+		#endif
+	#else
+	
+		#undef _WIN32_WINNT_WINLATEST
+	
+	#endif /* _WIN32_WINNT_@WINDOWS_WINNT_TARGET_VER@  */
+
+	#ifndef NTDDI_@WINDOWS_NTDDI_TARGET_VER@
+		
+		#undef NTDDI_WINLATEST
+
+		#include <WinSDKVer.h>
+
+		#ifdef NTDDI_VERSION
+			#if NTDDI_VERSION < NTDDI_@WINDOWS_WINNT_TARGET_VER@
+				#define NTDDI_VERSION NTDDI_@WINDOWS_NTDDI_TARGET_VER@
+			#endif
+		#else
+			#define NTDDI_VERSION  NTDDI_@WINDOWS_WINNT_TARGET_VER@
+		#endif
+
+	#else 
+
+		#undef NTDDI_WINLATEST
+
+	#endif /* NTDDI_@WINDOWS_NTDDI_TARGET_VER@ */
+			
+	#include <SDKDDKVer.h>
+#endif
+
+
+#endif /* @PROJECT_NAME@_@MODULE_NAME@_INCLUDE_TARGETVER_H_ */
